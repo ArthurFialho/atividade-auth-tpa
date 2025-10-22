@@ -96,3 +96,38 @@ Route::middleware(['auth'])->group(function() {
 - Adicione um campo de **categoria** ao produto e implemente um filtro.
 - Gere relatórios simples (por exemplo, produtos com estoque abaixo de 10 unidades).
 - Permita uploads de imagens dos produtos usando `Storage::disk('public')`.
+
+
+7. Testando o Sistema
+7.1. Inicie o servidor
+bash
+php artisan serve
+7.2. Fluxo de Teste
+Registre um usuário em /register
+Faça login em /login
+Cadastre produtos em /products/create
+Visualize a lista em /products
+Edite um produto clicando no botão de editar
+Visualize detalhes clicando no botão de visualizar
+Delete um produto (com confirmação)
+Teste o logout
+8. Comandos Úteis
+bash
+# Limpar cache
+php artisan cache:clear
+php artisan config:clear
+php artisan view:clear
+
+# Recriar banco de dados
+php artisan migrate:fresh
+
+# Criar dados de teste (opcional)
+php artisan make:factory ProductFactory
+php artisan make:seeder ProductSeeder
+📚 Conceitos Importantes Aplicados
+✅ MVC (Model-View-Controller)
+✅ Eloquent ORM (mapeamento objeto-relacional)
+✅ Migrations (controle de versão do banco)
+✅ Blade Templates (motor de templates)
+✅ Middleware (proteção de ro
+
